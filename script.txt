@@ -1,0 +1,17 @@
+CREATE DATABASE PROJETOLOJA;
+
+USER PROJETOLOJA;
+
+CREATE TABLE Usuários(
+	Id INT PRIMARY KEY auto_increment,
+	Nome Varchar(40) NOT NUL,
+	Email Varchar(40) NOT NULL,
+	Senha Varchar(40) NOT NULL,
+	Nivel Varchar(40) NOT NULL,
+);
+
+INSERT INTO Usuarios(Nome,Email,SenhaNivel)VALUES('Administrador','admin@email.com','123456','admin')
+
+INSERT INTO Usuarios(Nome,Email,SenhaNivel)VALUES('Usuario','user@email.com','123456','operador')
+
+SELECT * FROM Usuarios
