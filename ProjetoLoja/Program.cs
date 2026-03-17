@@ -1,4 +1,11 @@
+using ProjetoLoja.Repositorio;
+
 var builder = WebApplication.CreateBuilder(args);
+
+//INJEÇÃO DE DEPENDÊNDICA
+builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
+
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
