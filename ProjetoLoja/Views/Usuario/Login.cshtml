@@ -1,0 +1,34 @@
+﻿@model ProjetoLoja.Models.LoginViewModel;
+
+@{
+    ViewData["Title"] = "Login";
+
+}
+<div>
+    <div>
+        <div>
+            <h2>Login</h2>
+            <section>
+                <form asp-action="Login" method="post">
+                    @Html.AntiForgeryToken()
+
+                    <div asp-validation-summary="ModelOnly" class="text-danger small mb-3"></div>
+                <div>
+                    <label asp-for="Email"></label>
+                    <input asp-for="Email" placeholder="Digite seu email" />
+                    <span asp-validation-for="Email"></span>
+                </div>
+                    <div>
+                        <label asp-for="Senha"></label>
+                        <input asp-for="Senha" type="password" placeholder="Digite sua senha" />
+                        <span asp-validation-for="Senha"></span>
+                    </div>
+                    <div>
+                        <button>Entrar</button>
+                    </div>
+                </form>
+            </section>
+
+        </div>
+    </div>
+</div>
